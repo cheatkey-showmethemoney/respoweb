@@ -3,9 +3,10 @@
 """
 
 # 앱 기본 설정
-APP_TITLE = "쇼 미더 머니 - 로드나인" # 연결하려는 앱의 타이틀이 포함되면 안됨
+APP_TITLE = "돈! 도온~~~" # 연결하려는 앱의 타이틀이 포함되면 안됨
+# APP_TITLE = "쌀먹 - [게임]" # 연결하려는 앱의 타이틀이 포함되면 안됨
 APP_WIDTH = 600
-APP_HEIGHT = 650
+APP_HEIGHT = 1200
 
 # 기본 입력값
 DEFAULT_APP_NAME = "LORDNINE"  # 기본 검색할 앱 이름
@@ -18,9 +19,19 @@ DEFAULT_CAPTURE_INTERVAL = "1.0" # 기본 캡처 간격(초)
 DEFAULT_CLICK_X = "0"        # 기본 클릭 X 좌표
 DEFAULT_CLICK_Y = "0"        # 기본 클릭 Y 좌표
 
-# OCR 설정
-TESSERACT_PATH = r"..\..\Tesseract-OCR\tesseract.exe"  # Tesseract OCR 경로
+DRAG_ZOOM_FACTOR = 4 # 영역 드래그 미리보기 ZOOM 확대 배율
+
+# OCR 설정 - 기본값 (설정 파일이 없을 경우 사용)
+DEFAULT_TESSERACT_PATH = r"D:\tool\Tesseract-OCR\tesseract.exe"  # Tesseract OCR 기본 경로
 OCR_LANGUAGE = "kor+eng"     # OCR 인식 언어
+
+# 드래그 관련 단축키 설정
+DRAG_FIXED_WIDTH_KEY = "F"   # 너비 고정 (W키)
+DRAG_FIXED_HEIGHT_KEY = "G"  # 높이 고정 (H키)
+DRAG_KEEP_SQUARE_KEY = "E"   # 정사각형 비율 유지 (S키)
+DRAG_ASPECT_RATIO_KEY = "R"  # 특정 비율 유지 (R키)
+DRAG_ASPECT_RATIO = 16/9     # 비율 유지 시 가로 대 세로 비율 (16:9)
+DRAG_ASPECT_RATIO_TEXT = "16:9" # DRAG_ASPECT_RATIO 출력을 위한 문자열값
 
 # 파일 저장 관련
 SAVE_DIRECTORY = "captures"  # 캡처 이미지 저장 기본 폴더
@@ -35,3 +46,7 @@ ERROR_NO_WINDOW = "먼저 창에 연결해주세요."
 ERROR_WINDOW_CLOSED = "창이 닫혔습니다."
 ERROR_CONNECTION = "연결 중 오류가 발생했습니다"
 ERROR_FINDING = "검색 중 오류가 발생했습니다"
+ERROR_OCR_CONFIG = "Tesseract OCR 경로 설정이 필요합니다"
+
+# 설정 관련 상수
+SETTINGS_FILE = "lordnine_settings.ini"
